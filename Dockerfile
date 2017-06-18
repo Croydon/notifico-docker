@@ -10,7 +10,7 @@ RUN apt-get update \
     && apt-get -y --no-install-recommends install wget \
     && wget https://github.com/Croydon/notifico/archive/${NOTIFICO_DOCKER_VERSION}.tar.gz --no-check-certificate \
     && tar -xzf ${NOTIFICO_DOCKER_VERSION}.tar.gz \
-    && cp -fR ${NOTIFICO_DOCKER_VERSION}/* /notifico/app \
+    && cp -fR notifico-${NOTIFICO_DOCKER_VERSION}/* /notifico/app \
     && rm -rf ${NOTIFICO_DOCKER_VERSION} \
     && rm ${NOTIFICO_DOCKER_VERSION}.tar.gz \
     && wget https://bootstrap.pypa.io/get-pip.py \
