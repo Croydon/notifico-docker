@@ -16,6 +16,7 @@ RUN apt-get update \
     && wget https://bootstrap.pypa.io/get-pip.py \
     && python get-pip.py \
     && ln -r -s /notifico/config.py config.py \
+    && ln -r -s /notifico/local_config.py local_config.py \
     && ln -r -s /notifico/testing.db testing.db \
     && apt-get -y purge wget \
     && apt-get -y clean \
