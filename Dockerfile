@@ -27,4 +27,4 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/mirrors/* \
     && rm -rf /var/lib/apt/lists/*
 
-CMD ["/notifico/app/run.sh"]
+ENTRYPOINT ["/notifico/app/run.sh"]
