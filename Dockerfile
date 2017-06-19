@@ -1,7 +1,7 @@
 FROM ubuntu:17.10
 
 WORKDIR /notifico/app
-ENV NOTIFICO_DOCKER_VERSION=1.0.4
+ENV NOTIFICO_DOCKER_VERSION=1.0.5
 
 EXPOSE 5000
 
@@ -16,9 +16,8 @@ RUN apt-get update \
     && rm ${NOTIFICO_DOCKER_VERSION}.tar.gz \
     && wget https://bootstrap.pypa.io/get-pip.py \
     && python get-pip.py \
-    && ln -r -s /notifico/config/config.py config.py \
-    && ln -r -s /notifico/config/local_config.py local_config.py \
-    && ln -r -s /notifico/config/testing.db testing.db \
+    && ln -r -s /notifico/config/config.py local_config.py \
+    && ln -r -s /notifico/config/database.db testing.db \
     && python setup.py install \
     && chmod +x misc/deploy/run.sh \
     && apt-get -y purge wget \
