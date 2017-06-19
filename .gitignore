@@ -1,6 +1,8 @@
 # Project specific
 config.py
-database.db
+*.db
+config/config.py
+log/*.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

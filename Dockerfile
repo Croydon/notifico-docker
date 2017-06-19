@@ -16,8 +16,8 @@ RUN apt-get update \
     && rm ${NOTIFICO_DOCKER_VERSION}.tar.gz \
     && wget https://bootstrap.pypa.io/get-pip.py \
     && python get-pip.py \
-    && ln -r -s /notifico/config/config.py local_config.py \
-    && ln -r -s /notifico/config/database.db testing.db \
+    && ln -r -s /notifico/config/config/config.py local_config.py \
+    && ln -r -s /notifico/config/config/database.db testing.db \
     && python setup.py install \
     && chmod +x misc/deploy/run.sh \
     && apt-get -y purge wget \
