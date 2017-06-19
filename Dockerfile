@@ -18,6 +18,8 @@ RUN apt-get update \
     && ln -r -s /notifico/config/config.py config.py \
     && ln -r -s /notifico/config/local_config.py local_config.py \
     && ln -r -s /notifico/config/testing.db testing.db \
+    && python setup.py install \
+    && chmod +x misc/deploy/run.sh \
     && apt-get -y purge wget \
     && apt-get -y clean \
     && apt-get -y autoremove \
